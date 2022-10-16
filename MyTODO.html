@@ -6,35 +6,89 @@
     </head>
     <body>
 
-        <header>
-            <h1>todos</h1>
-        </header>
-
-        <main>
-            <header>
-                <input type="button">
-                <input type="text" placeholder="What needs to be done?">
+        <div class="todo-app"> 
+            <header class="todo-app__header">
+                <h1>todos</h1>
             </header>
 
-            <ul style="list-style-type:none">
-                <li><input type="checkbox">HTML<button>Close me, daddy</button></li>
-                <li><input type="checkbox">JavaScript<button>Close me, daddy</button></li>
-                <li><input type="checkbox">JS tools<button>Close me, daddy</button></li>
-            </ul>
+            <main class="todo-app__frame">
+                <section class="todo-app__main-controls">
+                    <input type="button">
+                    <input type="text" placeholder="What needs to be done?">
+                </section>
+    
+                <section class="todo-app__tasks">
+                    <ul style="list-style-type:none" class="todo-app__tasks-item tasks">
+                        <li  class="todo-app__tasks-item task-item">
+                            <div class="task-item__view">
+                                <input 
+                                type="checkbox"
+                                class="task-item__status"
+                                aria-label="Completed task: HTML"/>
+                                <span class="task-item__text">HTML</span>
+                                <button class="task-item__delete">Delete task</button>
+                            </div>
+                            <div class="task-item__edit" hidden="hidden">
+                                <input
+                                input="text"
+                                class="task-item__input"
+                                value="HTML"
+                                aria-label="Edit task: HTML"/>
+                            </div>
+                        </li>
+                        <li  class="todo-app__tasks-item task-item">
+                            <div class="task-item__view">
+                                <input 
+                                type="checkbox"
+                                class="task-item__status"
+                                aria-label="Completed task: JavaScript"/>
+                                <span class="task-item__text">JavaScript</span>
+                                <button class="task-item__delete">Delete task</button>
+                            </div>
+                            <div class="task-item__edit" hidden="hidden">
+                                <input
+                                input="text"
+                                class="task-item__input"
+                                value="JavaScript"
+                                aria-label="Edit task: JavaScript"/>
+                            </div>
+                        </li>
+                        <li  class="todo-app__tasks-item task-item">
+                            <div class="task-item__view">
+                                <input 
+                                type="checkbox"
+                                class="task-item__status"
+                                aria-label="Completed task: JS tools"/>
+                                <span class="task-item__text">JS tools</span>
+                                <button class="task-item__delete">Delete task</button>
+                            </div>
+                            <div class="task-item__edit" hidden="hidden">
+                                <input
+                                input="text"
+                                class="task-item__input"
+                                value="JS tools"
+                                aria-label="Edit task: JS tools"/>
+                            </div>
+                        </li>
 
-        </main>
-
-        <footer>
-            <span>3 items left</span>
-            <span>
-                <button>All</button>
-                <button>Active</button>
-                <button>Completed</button>
-            </span>
-            <span>
-                <button>Clear completed</button>
-            </span>
-        </footer>
-
+                    </ul>
+                </section>
+    
+            </main>
+    
+            <footer class="todo-app__actions-bar">
+                <span>3 items left</span>
+                
+                <span>
+                    <label for="All"><input type="radio" id="All" value="All" name="group">All</label>
+                    <label for="Active"><input type="radio" id="Active" value="Active" name="group">Active</label>
+                    <label for="Completed"><input type="radio" id="Completed" value="Completed" name="group">Completed</label>
+                </span>
+                
+                <span>
+                    <button>Clear completed</button>
+                </span>
+            </footer>
+        </div>
     </body>
 </html>
