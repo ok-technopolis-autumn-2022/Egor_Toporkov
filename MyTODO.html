@@ -13,7 +13,7 @@
 
             <main class="todo-app__frame">
                 <section class="todo-app__main-controls">
-                    <input type="button">
+                    <input type="button" title="submit-task">
                     <input type="text" placeholder="What needs to be done?">
                 </section>
     
@@ -79,10 +79,11 @@
             <footer class="todo-app__actions-bar">
                 <span>3 items left</span>
                 
-                <span>
-                    <label for="All"><input type="radio" id="All" value="All" name="group">All</label>
-                    <label for="Active"><input type="radio" id="Active" value="Active" name="group">Active</label>
-                    <label for="Completed"><input type="radio" id="Completed" value="Completed" name="group">Completed</label>
+                <span role="radiogroup"
+                aria-label="check-radiobutton">
+                    <label><input type="radio" value="All" name="group" checked>All</label>
+                    <label><input type="radio" value="Active" name="group">Active</label>
+                    <label><input type="radio" value="Completed" name="group">Completed</label>
                 </span>
                 
                 <span>
