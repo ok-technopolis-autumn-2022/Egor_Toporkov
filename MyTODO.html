@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MyTODO</title>
+    </head>
+    <body>
+
+        <div class="todo-app"> 
+            <header class="todo-app__header">
+                <h1>todos</h1>
+            </header>
+
+            <main class="todo-app__frame">
+                <section class="todo-app__main-controls">
+                    <input type="button" title="submit-task">
+                    <input type="text" placeholder="What needs to be done?">
+                </section>
+    
+                <section class="todo-app__tasks">
+                    <ul class="todo-app__tasks-item tasks">
+                        <li  class="todo-app__tasks-item task-item">
+                            <div class="task-item__view">
+                                <input 
+                                type="checkbox"
+                                class="task-item__status"
+                                aria-label="Completed task: HTML"/>
+                                <span class="task-item__text">HTML</span>
+                                <button class="task-item__delete">Delete task</button>
+                            </div>
+                            <div class="task-item__edit" hidden="hidden">
+                                <input
+                                input="text"
+                                class="task-item__input"
+                                value="HTML"
+                                aria-label="Edit task: HTML"/>
+                            </div>
+                        </li>
+                        <li  class="todo-app__tasks-item task-item">
+                            <div class="task-item__view">
+                                <input 
+                                type="checkbox"
+                                class="task-item__status"
+                                aria-label="Completed task: JavaScript"/>
+                                <span class="task-item__text">JavaScript</span>
+                                <button class="task-item__delete">Delete task</button>
+                            </div>
+                            <div class="task-item__edit" hidden="hidden">
+                                <input
+                                input="text"
+                                class="task-item__input"
+                                value="JavaScript"
+                                aria-label="Edit task: JavaScript"/>
+                            </div>
+                        </li>
+                        <li  class="todo-app__tasks-item task-item">
+                            <div class="task-item__view">
+                                <input 
+                                type="checkbox"
+                                class="task-item__status"
+                                aria-label="Completed task: JS tools"/>
+                                <span class="task-item__text">JS tools</span>
+                                <button class="task-item__delete">Delete task</button>
+                            </div>
+                            <div class="task-item__edit" hidden="hidden">
+                                <input
+                                input="text"
+                                class="task-item__input"
+                                value="JS tools"
+                                aria-label="Edit task: JS tools"/>
+                            </div>
+                        </li>
+
+                    </ul>
+                </section>
+    
+            </main>
+    
+            <footer class="todo-app__actions-bar">
+                <span>3 items left</span>
+                
+                <span role="radiogroup"
+                aria-label="check-radiobutton">
+                    <label><input type="radio" value="All" name="group" checked>All</label>
+                    <label><input type="radio" value="Active" name="group">Active</label>
+                    <label><input type="radio" value="Completed" name="group">Completed</label>
+                </span>
+                
+                <span>
+                    <button>Clear completed</button>
+                </span>
+            </footer>
+        </div>
+    </body>
+</html>
