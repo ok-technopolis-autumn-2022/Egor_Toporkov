@@ -68,7 +68,7 @@ body {
 }
 
 .submit-task {
-    background-image: url(images/firstSymbol.svg);
+    background-image: url(../images/firstSymbol.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30px;
@@ -152,7 +152,7 @@ body {
 }
 
 .task-status:checked + .task-status-check {
-    background-image: url(images/secondSymbol.svg);
+    background-image: url(../images/secondSymbol.svg);
     border: 1px solid #5DC2AF;
     background-position: center;
     background-repeat: no-repeat;
@@ -172,7 +172,7 @@ body {
 .task-view:hover > .task-delete,
 .task-view:focus > .task-delete,
 .task-delete:focus {
-    background-image: url(images/thirdSymbol.svg);
+    background-image: url(../images/thirdSymbol.svg);
 }
 
 .task-delete {
