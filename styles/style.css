@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+body {
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    margin: 0px;
+}
+
+/* .todo-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+} */
+
+.todo-app_header h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 100px;
+    font-weight: 100;
+    line-height: 21px;
+    letter-spacing: -2.5px;
+    text-align: center;
+}
+
+.main-frame {
+    position: relative;
+    max-width: 562px;
+    min-height: 402px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-frame::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    height: 5px;
+    left: 2px;
+    right: 2px;
+    z-index: -1;
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-frame::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    height: 10px;
+    left: 4px;
+    right: 4px;
+    z-index: -2;
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-controls {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    width: 562px;
+    box-shadow: inset 0px -1px 0px #e6e6e6;
+}
+
+.submit-task {
+    background-image: url(../images/firstSymbol.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    border: 0px solid;
+    background-color: #fff;
+    align-self: center;
+    margin: 24px 12px;
+    padding: 0px;
+    width: 45px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.new-task-text, .new-task-text:focus {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 21px;
+    text-align: left;
+    font-size: 24px;
+    flex-grow: 1;
+    color: #666;
+    border: none;
+    
+}
+
+.tasks-item {
+    padding: 0px;
+    margin: 0px;
+}
+
+.task-item {
+    position: relative;
+    background: #FFF;
+    min-width: 562px;
+    font-size: 24px; 
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.task-item:hover {
+    background: #fafafa;
+    cursor: pointer;
+}
+
+.task-view, .task-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 12px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    overflow: hidden;
+    box-shadow: inset 0px -1px 0px #e6e6e6;
+}
+
+.task-label {
+    cursor: text;
+}
+
+.task-status {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.task-status-check {
+    display: inline-block;
+    margin: 0px 15px 0 11px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid #E6E6E6;
+    background-color: #FFF;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.task-status:checked + .task-status-check {
+    background-image: url(../images/secondSymbol.svg);
+    border: 1px solid #5DC2AF;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.task-status:checked ~ .task-text{
+    text-decoration: line-through;
+    opacity: 0.75;
+}
+
+.task-text {
+    text-overflow: ellipsis;
+    flex: auto;
+    overflow: hidden;
+}
+
+.task-view:hover > .task-delete,
+.task-view:focus > .task-delete,
+.task-delete:focus {
+    background-image: url(../images/thirdSymbol.svg);
+}
+
+.task-delete {
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background-color: #FFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    cursor: pointer;
+}
+
+.actions-bar {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 43px;
+    box-shadow: inset 0px -1px 0px #e6e6e6;
+}
+
+.left-tasks-bar {
+    color: #888;
+    font-size: 15px;
+    line-height: 21px;
+    padding-left: 12px;
+}
+
+.options {
+    display: flex;
+}
+
+.option {
+    align-items: center;
+    margin: 8px;
+}
+
+.option-input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.option-input:checked + .option-text {
+    border: 1px solid #EBDFDF;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.option-text {
+    border: 1px solid #0000;
+    border-radius: 3px;
+    padding: 4px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.clear-completed {
+    display: flex;
+    padding-right: 12px;
+}
+
+.clear-completed-button {
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    background: #FFF;
+    color: #888;
+    border: none;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 0;
+}
